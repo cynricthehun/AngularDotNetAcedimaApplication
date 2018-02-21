@@ -13,6 +13,7 @@ namespace Angular4DotNetMvc.Controllers
             return View("Index", "", GetSerializedCourseViewModels());
         }
 
+        // WILL BE REPLACED. JUST BEING USED FOR SIMULATION.
         public string GetSerializedCourseViewModels()
         {
             var courses = new[]
