@@ -5,8 +5,9 @@
 @section JavascriptInHead{
     <script src="~/Scripts/Courses/courses-controller.js"></script>
     <script type="text/javascript">
-        courses = @Html.Raw(Model);
-        console.log(courses);
+        registrationModule.factory('bootstrappedData', function () {
+            return { courses: @Html.Raw(Model) };
+        });
     </script>    
 }
 <div class="container" ng-controller="CoursesController">
