@@ -1,1 +1,5 @@
-﻿var registrationModule = angular.module("registrationModule", []);
+﻿var registrationModule = angular.module("registrationModule", []).config(function($routeProvider, $locationProvider){
+    $routeProvider.when('/Registration/Courses', { templateUrl: '/Angular4DotNetMvc/templates/courses.html', controller: 'CoursesController' });
+    $routeProvider.when('/Registration/Instructors', { templateUrl: '/Angular4DotNetMvc/templates/instructors.html', controller: 'InstructorsController' });
+    $locationProvider.html5Mode(true);
+});
